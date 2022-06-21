@@ -1,0 +1,105 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* overflow: hidden; */
+
+}
+body{
+    animation:  bodyshake linear 2s infinite;
+}
+.back{
+    background: center/cover no-repeat url(background.jpg);
+    height: 600px;
+    position: relative;
+    z-index: -5;
+}
+.trees{
+    background: center/cover no-repeat url(trees.png);
+    height: 492px;
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
+    z-index: -2;
+}
+
+.track{
+    background: center/contain url(track.png);
+    height: 173px;
+    z-index: -1;
+    position: absolute;
+    bottom: -113px;
+    width: 800vw;
+    animation: carmove linear 3s infinite;
+}
+.box{
+    height: 250px;
+    width: 500px;
+    position:absolute;
+}
+.car{
+    background:center/cover no-repeat url(car_body.png); 
+    z-index: 99;
+    height: 100px;
+    position: absolute;
+    width: 319px;
+    bottom: -362px;
+    left: 214px;
+    /* animation:  carshake linear 0.6s infinite; */
+}
+.wheel1{
+    background: center/contain no-repeat url(car_wheel_left.png);
+    z-index: 99;
+    height: 63px;
+    width: 74px;
+    position: absolute;
+    bottom: -363px;
+    left: 236px;
+    animation:  wheelrotation linear 0.1s infinite;
+}
+.wheel2{
+    background:center/contain no-repeat url(car_wheel_right.png); 
+    z-index: 99;
+    height: 64px;
+    width: 69px;
+    position: absolute;
+    bottom: -366px;
+    left: 416px;
+    animation:  wheelrotation linear 0.1s infinite;
+}
+.box{
+    position: absolute;
+}
+
+@keyframes wheelrotation {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes carshake {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(0px);
+    }}
+@keyframes bodyshake {
+    0%{
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+    
+}
+@keyframes carmove {
+    100%{
+        transform: translate(-500vw);
+    }
+}
+
